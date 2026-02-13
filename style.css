@@ -52,16 +52,16 @@ body{
 }
 
 .hero-text{
-    max-width:600px;
+    max-width:700px;
 }
 
 .hero-text h1{
-    font-size:42px;
+    font-size:45px;
     color:#38bdf8;
 }
 
 .hero-text h2{
-    margin-top:10px;
+    margin-top:12px;
     color:#94a3b8;
 }
 
@@ -135,17 +135,17 @@ body{
 
 /* Photo */
 .hero-image{
-    position:relative;
+    position: relative;
+    left: -4.5cm;   /* moves image left by 2 cm */
 }
 
 .hero-image img{
-    width:300px;
-    height:300px;
-    border-radius:50%;
-    object-fit:cover;
-    position:relative;
-    z-index:2;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    object-fit: cover;
 }
+
 
 /* Glow Animation */
 .glow-ring{
