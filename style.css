@@ -47,8 +47,8 @@ body{
     display:flex;
     justify-content:space-between;
     align-items:center;
-    padding:60px 80px;
-    min-height:calc(100vh - 80px);
+    padding:120px 80px;
+    min-height:100vh;
 }
 
 .hero-text{
@@ -131,7 +131,7 @@ body{
     text-decoration:none;
 }
 
-/* ===== Image Section ===== */
+/* ===== Image Section (FIXED) ===== */
 .hero-image{
     display:flex;
     justify-content:center;
@@ -139,6 +139,7 @@ body{
     flex:1;
 }
 
+/* Wrapper keeps glow + image together */
 .image-wrapper{
     position:relative;
     width:300px;
@@ -157,6 +158,7 @@ body{
     z-index:2;
 }
 
+/* Glow */
 .glow-ring{
     position:absolute;
     width:300px;
@@ -226,23 +228,10 @@ footer{
 /* ===== Mobile ===== */
 @media (max-width:768px){
 
-    body{
-        padding-top:90px; /* more space for navbar */
-    }
-
-    .navbar{
-        padding:15px 20px;
-    }
-
-    .nav-links{
-        gap:12px;
-        font-size:13px;
-    }
-
     .hero{
         flex-direction:column;
         text-align:center;
-        padding:30px 20px;
+        padding:40px 20px;
         min-height:auto;
     }
 
@@ -251,13 +240,8 @@ footer{
     }
 
     .hero-text h1{
-        font-size:28px;
+        font-size:30px;
         line-height:1.2;
-        margin-top:10px;
-    }
-
-    .hero-text h2{
-        font-size:18px;
     }
 
     .hero-text p{
