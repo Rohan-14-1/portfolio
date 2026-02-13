@@ -2,11 +2,11 @@
     margin:0;
     padding:0;
     box-sizing:border-box;
-    font-family: 'Segoe UI', sans-serif;
+    font-family:'Segoe UI', sans-serif;
 }
 
 body{
-    background: radial-gradient(circle at right, #0b3c5d, #020617);
+    background: linear-gradient(90deg,#020617,#0b3c5d);
     color:#e2e8f0;
 }
 
@@ -17,8 +17,9 @@ body{
     padding:20px 50px;
     position:fixed;
     width:100%;
-    background:rgba(2,6,23,0.7);
+    background:rgba(2,6,23,0.8);
     backdrop-filter:blur(10px);
+    z-index:1000;
 }
 
 .logo{
@@ -55,7 +56,7 @@ body{
 }
 
 .hero-text h1{
-    font-size:40px;
+    font-size:42px;
     color:#38bdf8;
 }
 
@@ -69,12 +70,12 @@ body{
     line-height:1.6;
 }
 
-/* Skills Row */
+/* Skills */
 .skills-row{
     margin-top:20px;
     display:flex;
     flex-wrap:wrap;
-    gap:15px;
+    gap:12px;
 }
 
 .skills-row span{
@@ -132,19 +133,21 @@ body{
     color:#38bdf8;
 }
 
-/* Profile Image */
+/* Photo */
 .hero-image{
     position:relative;
 }
 
 .hero-image img{
     width:300px;
+    height:300px;
     border-radius:50%;
+    object-fit:cover;
     position:relative;
     z-index:2;
 }
 
-/* Glow Ring Animation */
+/* Glow Animation */
 .glow-ring{
     position:absolute;
     width:340px;
@@ -180,26 +183,20 @@ body{
     box-shadow:0 0 20px rgba(56,189,248,0.2);
 }
 
-/* Fade Animations */
+/* Fade Animation */
 .fade-in{
     opacity:0;
     animation:fadeUp 1s forwards;
 }
 
-.delay{ animation-delay:0.5s; }
-.delay2{ animation-delay:1s; }
-.delay3{ animation-delay:1.5s; }
-.delay4{ animation-delay:2s; }
+.delay{animation-delay:0.5s;}
+.delay2{animation-delay:1s;}
+.delay3{animation-delay:1.5s;}
+.delay4{animation-delay:2s;}
 
 @keyframes fadeUp{
-    from{
-        opacity:0;
-        transform:translateY(30px);
-    }
-    to{
-        opacity:1;
-        transform:translateY(0);
-    }
+    from{opacity:0; transform:translateY(30px);}
+    to{opacity:1; transform:translateY(0);}
 }
 
 /* Scroll reveal */

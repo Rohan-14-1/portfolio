@@ -1,36 +1,34 @@
 // Typing Animation
-const text = [
+const roles = [
     "B.Tech AIML Student",
-    "AI Developer",
     "Machine Learning Enthusiast",
+    "AI Developer",
     "Open to Internships"
 ];
 
-let i = 0;
-let j = 0;
-let currentText = "";
+let roleIndex = 0;
+let charIndex = 0;
 let isDeleting = false;
 
 function typeEffect() {
-    currentText = text[i];
+    const currentRole = roles[roleIndex];
+    const typingElement = document.getElementById("typing-text");
 
     if (!isDeleting) {
-        document.getElementById("typing-text").innerHTML =
-            currentText.substring(0, j++);
+        typingElement.textContent = currentRole.substring(0, charIndex++);
     } else {
-        document.getElementById("typing-text").innerHTML =
-            currentText.substring(0, j--);
+        typingElement.textContent = currentRole.substring(0, charIndex--);
     }
 
-    if (!isDeleting && j === currentText.length + 1) {
+    if (!isDeleting && charIndex === currentRole.length + 1) {
         isDeleting = true;
         setTimeout(typeEffect, 1000);
         return;
     }
 
-    if (isDeleting && j === 0) {
+    if (isDeleting && charIndex === 0) {
         isDeleting = false;
-        i = (i + 1) % text.length;
+        roleIndex = (roleIndex + 1) % roles.length;
     }
 
     setTimeout(typeEffect, isDeleting ? 40 : 80);
@@ -42,7 +40,7 @@ typeEffect();
 // Scroll Reveal
 const observer = new IntersectionObserver(entries => {
     entries.forEach(entry => {
-        if (entry.isIntersecting) {
+        if(entry.isIntersecting){
             entry.target.classList.add("show");
         }
     });
