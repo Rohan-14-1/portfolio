@@ -13,21 +13,24 @@
     font-family: 'Segoe UI', sans-serif;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     background: #0f172a;
     color: #e2e8f0;
-    line-height: 1.6;
 }
 
 /* Navbar */
 nav {
     position: fixed;
     width: 100%;
-    background: #020617;
+    background: rgba(2,6,23,0.9);
+    backdrop-filter: blur(10px);
     padding: 15px 40px;
     display: flex;
     justify-content: space-between;
-    align-items: center;
     z-index: 1000;
 }
 
@@ -39,21 +42,24 @@ nav a {
     color: #e2e8f0;
     text-decoration: none;
     margin-left: 20px;
-    font-size: 15px;
+    transition: 0.3s;
 }
 
 nav a:hover {
     color: #38bdf8;
 }
 
-/* Hero Section */
+/* Hero */
 .hero {
     height: 100vh;
     display: flex;
-    align-items: center;
     justify-content: center;
+    align-items: center;
     text-align: center;
-    padding: 20px;
+}
+
+.hero-content {
+    animation: float 4s ease-in-out infinite;
 }
 
 .hero h1 {
@@ -63,34 +69,41 @@ nav a:hover {
 
 .hero p {
     margin-top: 15px;
-    font-size: 18px;
     color: #94a3b8;
+    font-size: 18px;
 }
 
 .btn {
+    display: inline-block;
     margin-top: 25px;
-    padding: 12px 25px;
+    padding: 12px 28px;
     background: #38bdf8;
-    border: none;
     color: #020617;
     font-weight: bold;
     border-radius: 6px;
-    cursor: pointer;
     text-decoration: none;
+    transition: 0.3s;
 }
 
 .btn:hover {
-    background: #0ea5e9;
+    transform: scale(1.08);
+    box-shadow: 0 0 20px #38bdf8;
+}
+
+/* Floating Animation */
+@keyframes float {
+    0%,100% { transform: translateY(0px); }
+    50% { transform: translateY(-15px); }
 }
 
 /* Sections */
 section {
-    padding: 80px 40px;
+    padding: 90px 40px;
     max-width: 1000px;
     margin: auto;
 }
 
-h2.section-title {
+.section-title {
     font-size: 32px;
     margin-bottom: 30px;
     color: #38bdf8;
@@ -103,12 +116,13 @@ h2.section-title {
     margin-bottom: 20px;
     border-radius: 10px;
     border: 1px solid #1e293b;
-    transition: 0.3s;
+    transition: 0.4s;
 }
 
 .card:hover {
-    transform: translateY(-5px);
+    transform: translateY(-8px);
     border-color: #38bdf8;
+    box-shadow: 0 0 25px rgba(56,189,248,0.2);
 }
 
 /* Skills */
@@ -119,10 +133,28 @@ h2.section-title {
 }
 
 .skill {
-    background: #020617;
-    padding: 8px 15px;
+    padding: 8px 16px;
     border-radius: 20px;
+    background: #020617;
     border: 1px solid #1e293b;
+    transition: 0.3s;
+}
+
+.skill:hover {
+    border-color: #38bdf8;
+    box-shadow: 0 0 10px rgba(56,189,248,0.4);
+}
+
+/* Scroll Animation */
+.hidden {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: all 0.8s ease;
+}
+
+.show {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 /* Footer */
@@ -150,27 +182,22 @@ footer {
 
 <!-- Hero -->
 <div class="hero">
-    <div>
+    <div class="hero-content">
         <h1>Hi, I'm Rohan</h1>
-        <p>B.Tech Artificial Intelligence & Machine Learning Student  
-        Building AI projects and learning real-world technologies.</p>
+        <p>B.Tech AIML Student | Building AI & Tech Projects</p>
         <a href="#projects" class="btn">View My Work</a>
     </div>
 </div>
 
-<!-- About -->
-<section id="about">
+<section id="about" class="hidden">
     <h2 class="section-title">About Me</h2>
     <div class="card">
-        <p>
-            I am a second-year B.Tech student specializing in Artificial Intelligence and Machine Learning.
-            I am passionate about AI, Data Science, and software development. I enjoy building projects that solve real-world problems and continuously improving my technical skills.
-        </p>
+        I am a second-year B.Tech student specializing in Artificial Intelligence and Machine Learning. 
+        I am passionate about AI, Data Science, and building real-world projects while continuously improving my technical skills.
     </div>
 </section>
 
-<!-- Skills -->
-<section id="skills">
+<section id="skills" class="hidden">
     <h2 class="section-title">Skills</h2>
     <div class="skills">
         <div class="skill">Python</div>
@@ -180,53 +207,59 @@ footer {
         <div class="skill">CSS</div>
         <div class="skill">JavaScript</div>
         <div class="skill">Git & GitHub</div>
-        <div class="skill">OOP</div>
         <div class="skill">Linux</div>
+        <div class="skill">OOP</div>
     </div>
 </section>
 
-<!-- Projects -->
-<section id="projects">
+<section id="projects" class="hidden">
     <h2 class="section-title">Projects</h2>
-
     <div class="card">
         <h3>Smart Grocery List & Meal Planner</h3>
-        <p>AI-based system that suggests grocery items and meal plans to reduce waste and improve planning.</p>
+        AI-based system for smart grocery management and meal planning.
     </div>
-
     <div class="card">
         <h3>AI Car Concept</h3>
-        <p>Project focused on intelligent vehicle concepts, automation, and AI-based driving assistance.</p>
+        Intelligent vehicle concept using AI-based automation ideas.
     </div>
-
     <div class="card">
         <h3>Linux Case Study</h3>
-        <p>Comprehensive study covering Linux installation, commands, advantages, and system usage.</p>
+        Detailed study on Linux installation, commands, and system usage.
     </div>
 </section>
 
-<!-- Education -->
-<section id="education">
+<section id="education" class="hidden">
     <h2 class="section-title">Education</h2>
     <div class="card">
-        <h3>B.Tech in Artificial Intelligence & Machine Learning</h3>
-        <p>Currently in 2nd Year</p>
+        B.Tech in Artificial Intelligence & Machine Learning  
+        <br>Currently in 2nd Year
     </div>
 </section>
 
-<!-- Contact -->
-<section id="contact">
+<section id="contact" class="hidden">
     <h2 class="section-title">Contact</h2>
     <div class="card">
-        <p>Email: your-email@gmail.com</p>
-        <p>GitHub: github.com/yourusername</p>
-        <p>LinkedIn: linkedin.com/in/yourprofile</p>
+        Email: your-email@gmail.com <br>
+        GitHub: github.com/yourusername <br>
+        LinkedIn: linkedin.com/in/yourprofile
     </div>
 </section>
 
 <footer>
-    © 2026 Rohan | AIML Portfolio
+© 2026 Rohan | AIML Portfolio
 </footer>
+
+<script>
+const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+        if(entry.isIntersecting){
+            entry.target.classList.add("show");
+        }
+    });
+});
+
+document.querySelectorAll(".hidden").forEach(el => observer.observe(el));
+</script>
 
 </body>
 </html>
