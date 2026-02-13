@@ -222,3 +222,77 @@ footer{
     padding:20px;
     background:#020617;
 }
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+
+    /* Navbar */
+    .navbar {
+        padding: 15px 20px;
+    }
+
+    .nav-links {
+        gap: 15px;
+        font-size: 14px;
+    }
+
+    /* Hero Section */
+    .hero {
+        flex-direction: column;
+        text-align: center;
+        padding: 40px 20px;
+    }
+
+    .hero-text {
+        max-width: 100%;
+    }
+
+    .hero-text h1 {
+        font-size: 32px;
+        line-height: 1.2;
+    }
+
+    .hero-text p {
+        font-size: 14px;
+    }
+
+    /* Profile Image */
+    .hero-image {
+        margin-top: 30px;
+    }
+
+    .hero-image img {
+        width: 220px;
+        height: 220px;
+    }
+
+    .glow-ring {
+        width: 260px;
+        height: 260px;
+        top: -20px;
+        left: -20px;
+    }
+
+    /* Skills */
+    .skills-row {
+        justify-content: center;
+    }
+
+    /* Buttons */
+    .buttons {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        align-items: center;
+    }
+
+    .btn {
+        width: 80%;
+        text-align: center;
+    }
+
+    /* Social icons */
+    .social {
+        justify-content: center;
+    }
+}
