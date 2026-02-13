@@ -1,140 +1,231 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Rohan | AIML Portfolio</title>
-    <style>
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            background: #f4f6f9;
-            color: #333;
-        }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rohan | AIML Portfolio</title>
 
-        header {
-            background: #0a192f;
-            color: white;
-            padding: 20px;
-            text-align: center;
-        }
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
 
-        nav {
-            background: #112240;
-            text-align: center;
-            padding: 10px;
-        }
+body {
+    background: #0f172a;
+    color: #e2e8f0;
+    line-height: 1.6;
+}
 
-        nav a {
-            color: white;
-            margin: 0 15px;
-            text-decoration: none;
-            font-weight: bold;
-        }
+/* Navbar */
+nav {
+    position: fixed;
+    width: 100%;
+    background: #020617;
+    padding: 15px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+}
 
-        section {
-            padding: 40px;
-            max-width: 900px;
-            margin: auto;
-        }
+nav h2 {
+    color: #38bdf8;
+}
 
-        h2 {
-            color: #0a192f;
-        }
+nav a {
+    color: #e2e8f0;
+    text-decoration: none;
+    margin-left: 20px;
+    font-size: 15px;
+}
 
-        .card {
-            background: white;
-            padding: 20px;
-            margin: 15px 0;
-            border-radius: 8px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-        }
+nav a:hover {
+    color: #38bdf8;
+}
 
-        footer {
-            text-align: center;
-            background: #0a192f;
-            color: white;
-            padding: 15px;
-        }
-    </style>
+/* Hero Section */
+.hero {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 20px;
+}
+
+.hero h1 {
+    font-size: 48px;
+    color: #38bdf8;
+}
+
+.hero p {
+    margin-top: 15px;
+    font-size: 18px;
+    color: #94a3b8;
+}
+
+.btn {
+    margin-top: 25px;
+    padding: 12px 25px;
+    background: #38bdf8;
+    border: none;
+    color: #020617;
+    font-weight: bold;
+    border-radius: 6px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.btn:hover {
+    background: #0ea5e9;
+}
+
+/* Sections */
+section {
+    padding: 80px 40px;
+    max-width: 1000px;
+    margin: auto;
+}
+
+h2.section-title {
+    font-size: 32px;
+    margin-bottom: 30px;
+    color: #38bdf8;
+}
+
+/* Cards */
+.card {
+    background: #020617;
+    padding: 25px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    border: 1px solid #1e293b;
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    border-color: #38bdf8;
+}
+
+/* Skills */
+.skills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.skill {
+    background: #020617;
+    padding: 8px 15px;
+    border-radius: 20px;
+    border: 1px solid #1e293b;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #020617;
+    color: #64748b;
+}
+</style>
 </head>
 <body>
 
-<header>
-    <h1>Rohan</h1>
-    <p>B.Tech Artificial Intelligence & Machine Learning | 2nd Year Student</p>
-</header>
-
+<!-- Navbar -->
 <nav>
-    <a href="#about">About</a>
-    <a href="#skills">Skills</a>
-    <a href="#projects">Projects</a>
-    <a href="#education">Education</a>
-    <a href="#contact">Contact</a>
+    <h2>Rohan</h2>
+    <div>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#education">Education</a>
+        <a href="#contact">Contact</a>
+    </div>
 </nav>
 
+<!-- Hero -->
+<div class="hero">
+    <div>
+        <h1>Hi, I'm Rohan</h1>
+        <p>B.Tech Artificial Intelligence & Machine Learning Student  
+        Building AI projects and learning real-world technologies.</p>
+        <a href="#projects" class="btn">View My Work</a>
+    </div>
+</div>
+
+<!-- About -->
 <section id="about">
-    <h2>About Me</h2>
+    <h2 class="section-title">About Me</h2>
     <div class="card">
         <p>
-            I am a B.Tech student specializing in Artificial Intelligence and Machine Learning.
-            I am passionate about AI, Data Science, and building real-world tech projects.
-            Currently exploring machine learning, web development, and intelligent systems.
+            I am a second-year B.Tech student specializing in Artificial Intelligence and Machine Learning.
+            I am passionate about AI, Data Science, and software development. I enjoy building projects that solve real-world problems and continuously improving my technical skills.
         </p>
     </div>
 </section>
 
+<!-- Skills -->
 <section id="skills">
-    <h2>Skills</h2>
-    <div class="card">
-        <ul>
-            <li>Python</li>
-            <li>Machine Learning Basics</li>
-            <li>Data Science</li>
-            <li>HTML, CSS, JavaScript</li>
-            <li>Git & GitHub</li>
-            <li>OOP Concepts</li>
-        </ul>
+    <h2 class="section-title">Skills</h2>
+    <div class="skills">
+        <div class="skill">Python</div>
+        <div class="skill">Machine Learning</div>
+        <div class="skill">Data Science</div>
+        <div class="skill">HTML</div>
+        <div class="skill">CSS</div>
+        <div class="skill">JavaScript</div>
+        <div class="skill">Git & GitHub</div>
+        <div class="skill">OOP</div>
+        <div class="skill">Linux</div>
     </div>
 </section>
 
+<!-- Projects -->
 <section id="projects">
-    <h2>Projects</h2>
+    <h2 class="section-title">Projects</h2>
 
     <div class="card">
         <h3>Smart Grocery List & Meal Planner</h3>
-        <p>AI-based system to suggest grocery items and plan meals efficiently.</p>
+        <p>AI-based system that suggests grocery items and meal plans to reduce waste and improve planning.</p>
     </div>
 
     <div class="card">
-        <h3>AI Car Project</h3>
-        <p>Concept project focused on intelligent driving and automation ideas.</p>
+        <h3>AI Car Concept</h3>
+        <p>Project focused on intelligent vehicle concepts, automation, and AI-based driving assistance.</p>
     </div>
 
     <div class="card">
         <h3>Linux Case Study</h3>
-        <p>Detailed study on Linux installation, usage, advantages, and limitations.</p>
+        <p>Comprehensive study covering Linux installation, commands, advantages, and system usage.</p>
     </div>
 </section>
 
+<!-- Education -->
 <section id="education">
-    <h2>Education</h2>
+    <h2 class="section-title">Education</h2>
     <div class="card">
-        <p><strong>B.Tech in Artificial Intelligence & Machine Learning</strong></p>
+        <h3>B.Tech in Artificial Intelligence & Machine Learning</h3>
         <p>Currently in 2nd Year</p>
     </div>
 </section>
 
+<!-- Contact -->
 <section id="contact">
-    <h2>Contact</h2>
+    <h2 class="section-title">Contact</h2>
     <div class="card">
-        <p>Email: your-email@example.com</p>
+        <p>Email: your-email@gmail.com</p>
         <p>GitHub: github.com/yourusername</p>
         <p>LinkedIn: linkedin.com/in/yourprofile</p>
     </div>
 </section>
 
 <footer>
-    <p>© 2026 Rohan | AIML Student Portfolio</p>
+    © 2026 Rohan | AIML Portfolio
 </footer>
 
 </body>
