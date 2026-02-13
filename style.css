@@ -42,7 +42,7 @@ body{
     color:#38bdf8;
 }
 
-/* Hero */
+/* ===== Hero Section ===== */
 .hero{
     display:flex;
     justify-content:space-between;
@@ -52,7 +52,7 @@ body{
 }
 
 .hero-text{
-    max-width:700px;
+    max-width:600px;
 }
 
 .hero-text h1{
@@ -118,50 +118,53 @@ body{
 }
 
 /* Social */
-.social {
-    display: flex;
-    align-items: center;
-    gap: 18px;
-    margin-top: 25px;
+.social{
+    display:flex;
+    align-items:center;
+    gap:18px;
+    margin-top:25px;
 }
 
-.social a {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 22px;
-    color: #38bdf8;
-    text-decoration: none;
+.social a{
+    font-size:22px;
+    color:#38bdf8;
+    text-decoration:none;
 }
 
-.social a i {
-    line-height: 1;
-}
-
-
-/* Photo */
+/* ===== Image Section (FIXED) ===== */
 .hero-image{
-    position: relative;
-    left: -4.5cm;   /* moves image left by 2 cm */
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex:1;
 }
 
-.hero-image img{
-    width: 300px;
-    height: 300px;
-    border-radius: 50%;
-    object-fit: cover;
+/* Wrapper keeps glow + image together */
+.image-wrapper{
+    position:relative;
+    width:300px;
+    height:300px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
 }
 
+.image-wrapper img{
+    width:260px;
+    height:260px;
+    border-radius:50%;
+    object-fit:cover;
+    position:relative;
+    z-index:2;
+}
 
-/* Glow Animation */
+/* Glow */
 .glow-ring{
     position:absolute;
-    width:340px;
-    height:340px;
+    width:300px;
+    height:300px;
     border-radius:50%;
     border:3px solid #38bdf8;
-    top:-20px;
-    left:-20px;
     animation:glow 2.5s infinite alternate;
 }
 
@@ -189,7 +192,7 @@ body{
     box-shadow:0 0 20px rgba(56,189,248,0.2);
 }
 
-/* Fade Animation */
+/* Animations */
 .fade-in{
     opacity:0;
     animation:fadeUp 1s forwards;
@@ -205,7 +208,6 @@ body{
     to{opacity:1; transform:translateY(0);}
 }
 
-/* Scroll reveal */
 .hidden{
     opacity:0;
     transform:translateY(40px);
@@ -223,89 +225,62 @@ footer{
     background:#020617;
 }
 
-/* ===== Mobile Responsive ===== */
-@media (max-width: 768px) {
+/* ===== Mobile ===== */
+@media (max-width:768px){
 
-    /* Navbar */
-    .nav-links{
-        display: none; /* hide crowded menu */
-    }
-
-    .navbar{
-        padding: 15px 20px;
-    }
-
-    /* Hero layout */
     .hero{
-        flex-direction: column;
-        text-align: center;
-        padding: 40px 20px;
-        min-height: auto;
+        flex-direction:column;
+        text-align:center;
+        padding:40px 20px;
+        min-height:auto;
     }
 
     .hero-text{
-        width: 100%;
+        max-width:100%;
     }
 
     .hero-text h1{
-        font-size: 30px;
-        line-height: 1.2;
+        font-size:30px;
+        line-height:1.2;
     }
 
     .hero-text p{
-        font-size: 14px;
+        font-size:14px;
     }
 
-    /* Skills */
     .skills-row{
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 8px;
+        justify-content:center;
     }
 
-    .skills-row span{
-        font-size: 12px;
-        padding: 6px 12px;
-    }
-
-    /* Buttons */
     .buttons{
-        display: flex;
-        flex-direction: column;
-        gap: 12px;
-        align-items: center;
+        display:flex;
+        flex-direction:column;
+        gap:12px;
+        align-items:center;
     }
 
     .btn{
-        width: 90%;
-        text-align: center;
+        width:90%;
+        margin-right:0;
     }
 
-    /* Social icons */
     .social{
-        justify-content: center;
-        margin-top: 15px;
+        justify-content:center;
     }
 
-    /* Image */
-    .hero-image{
-        margin-top: 30px;
-        display: flex;
-        justify-content: center;
-        width: 100%;
+    .image-wrapper{
+        width:220px;
+        height:220px;
+        margin-top:30px;
     }
 
-    .hero-image img{
-        width: 220px;
-        height: 220px;
-        object-fit: cover;
+    .image-wrapper img{
+        width:190px;
+        height:190px;
     }
 
     .glow-ring{
-        width: 260px;
-        height: 260px;
-        top: -20px;
-        left: -20px;
+        width:220px;
+        height:220px;
     }
 }
