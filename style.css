@@ -284,3 +284,10 @@ footer{
         height:220px;
     }
 }
+
+/* ElevenLabs Floating Widget */
+elevenlabs-agent {
+  --accent-color: #38bdf8;
+  --background: rgba(20, 20, 30, 0.9);
+  --border-radius: 18px;
+}
