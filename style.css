@@ -226,32 +226,20 @@ footer{
 /* ===== Mobile Responsive ===== */
 @media (max-width: 768px) {
 
-    /* Body */
-    body{
-        padding-top: 60px;
-    }
-
     /* Navbar */
-    .navbar{
-        padding: 12px 15px;
-    }
-
-    .logo{
-        font-size: 20px;
-    }
-
     .nav-links{
-        gap: 12px;
-        font-size: 13px;
+        display: none; /* hide crowded menu */
     }
 
-    /* Hero Layout */
+    .navbar{
+        padding: 15px 20px;
+    }
+
+    /* Hero layout */
     .hero{
-        display: flex;
         flex-direction: column;
-        align-items: center;
         text-align: center;
-        padding: 30px 15px;
+        padding: 40px 20px;
         min-height: auto;
     }
 
@@ -264,24 +252,21 @@ footer{
         line-height: 1.2;
     }
 
-    .hero-text h2{
-        font-size: 18px;
-    }
-
     .hero-text p{
         font-size: 14px;
-        padding: 0 5px;
     }
 
     /* Skills */
     .skills-row{
+        display: flex;
+        flex-wrap: wrap;
         justify-content: center;
-        gap: 10px;
+        gap: 8px;
     }
 
-    .skill-item{
+    .skills-row span{
         font-size: 12px;
-        padding: 6px 10px;
+        padding: 6px 12px;
     }
 
     /* Buttons */
@@ -290,7 +275,6 @@ footer{
         flex-direction: column;
         gap: 12px;
         align-items: center;
-        width: 100%;
     }
 
     .btn{
@@ -304,7 +288,7 @@ footer{
         margin-top: 15px;
     }
 
-    /* Profile Image */
+    /* Image */
     .hero-image{
         margin-top: 30px;
         display: flex;
