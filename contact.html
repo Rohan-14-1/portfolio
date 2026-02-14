@@ -42,30 +42,76 @@
         <a href="https://www.facebook.com/rohan.mdl.14" target="_blank"><i class="fab fa-facebook-f"></i></a>
     </div>
 
-    <!-- Contact Form (FormSubmit) -->
-    <form class="contact-form" 
-          action="https://formsubmit.co/juugi202214115@gmail.com"
-          method="POST">
+    <!-- CONTACT FORM -->
+  <form action="https://formspree.io/f/xqedqqld"
+        method="POST"
+        class="contact-form glass"
+        id="contactForm">
 
-        <!-- Disable Captcha -->
-        <input type="hidden" name="_captcha" value="false">
+    <input type="text" name="name" placeholder="Your Name" required>
 
-        <!-- Email Subject -->
-        <input type="hidden" name="_subject" value="New message from Portfolio">
+    <input type="email" name="email" placeholder="Your Email" required>
 
-        <!-- Redirect after submit (optional) -->
-        <!-- <input type="hidden" name="_next" value="thankyou.html"> -->
+    <input type="text" name="subject" placeholder="Subject">
 
-        <!-- Form Fields -->
-        <input type="text" name="name" placeholder="Your Name" required>
-        <input type="text" name="Email" placeholder="Email" required>
-        <input type="text" name="subject" placeholder="Subject" required>
-        <textarea name="message" placeholder="Your Message..." required></textarea>
+    <textarea name="message" rows="5"
+      placeholder="Your Message..." required></textarea>
 
-        <button type="submit">🚀 Send Message</button>
-    </form>
+    <button type="submit" id="sendBtn">
+      🚀 Send Message
+    </button>
+
+    <p id="formStatus"></p>
+
+  </form>
 
 </section>
+
+<!-- ================= FORM SCRIPT ================= -->
+<script>
+const form = document.getElementById("contactForm");
+const btn = document.getElementById("sendBtn");
+const status = document.getElementById("formStatus");
+
+form.addEventListener("submit", async function(e) {
+  e.preventDefault();
+
+  btn.innerHTML = "Sending...";
+  btn.disabled = true;
+
+  const data = new FormData(form);
+
+  try {
+    const response = await fetch(form.action, {
+      method: form.method,
+      body: data,
+      headers: { 'Accept': 'application/json' }
+    });
+
+    if (response.ok) {
+      status.innerHTML = "✅ Message sent successfully!";
+      status.style.color = "#38bdf8";
+
+      form.reset();
+      btn.innerHTML = "Message Sent ✓";
+
+      setTimeout(() => {
+        btn.innerHTML = "🚀 Send Message";
+        btn.disabled = false;
+        status.innerHTML = "";
+      }, 3000);
+    } else {
+      throw new Error();
+    }
+
+  } catch (error) {
+    status.innerHTML = "❌ Something went wrong. Try again.";
+    status.style.color = "#f87171";
+    btn.innerHTML = "🚀 Send Message";
+    btn.disabled = false;
+  }
+});
+</script>
 
 </body>
 </html>
