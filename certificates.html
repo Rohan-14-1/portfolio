@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Certificates | Rohan</title>
+    <link rel="stylesheet" href="certificates.css">
+
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+
+<!-- Navbar (same as other pages) -->
+<nav class="navbar">
+    <h2 class="logo">Rohan</h2>
+    <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="skills.html">Skills</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="certificates.html">Certificates</a></li>
+        <li><a href="contact.html">Contact</a></li>
+    </ul>
+</nav>
+
+<!-- Certificates Section -->
+<section class="cert-section">
+
+    <h1 class="title">My Certificates</h1>
+    <p class="subtitle">
+        Technical achievements and learning milestones.
+    </p>
+
+    <!-- Category Buttons -->
+    <div class="filter-buttons">
+        <button class="filter-btn active" onclick="filterCert('all')">All</button>
+        <button class="filter-btn" onclick="filterCert('tech')">Tech</button>
+        <button class="filter-btn" onclick="filterCert('other')">Others</button>
+    </div>
+
+    <!-- Certificates Grid -->
+    <div class="cert-grid">
+
+        <!-- Certificate 1 -->
+        <div class="cert-card hidden" data-category="tech">
+            <h3>Deep Learning Specialization</h3>
+            <p>Coursera • 2024</p>
+            <a href="certificates/deeplearning.pdf" target="_blank" class="btn view">View</a>
+        </div>
+
+        <!-- Certificate 2 -->
+        <div class="cert-card hidden" data-category="tech">
+            <h3>Computer Vision with TensorFlow</h3>
+            <p>Coursera • 2024</p>
+            <a href="certificates/cv.pdf" target="_blank" class="btn view">View</a>
+        </div>
+
+        <!-- Certificate 3 -->
+        <div class="cert-card hidden" data-category="other">
+            <h3>Linux Case Study</h3>
+            <p>College • 2023</p>
+            <a href="certificates/linux.pdf" target="_blank" class="btn view">View</a>
+        </div>
+
+    </div>
+
+</section>
+
+<footer>
+© 2026 Rohan | AIML Portfolio
+</footer>
+
+<script src="certificates.js"></script>
+</body>
+</html>

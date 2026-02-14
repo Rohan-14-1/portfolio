@@ -42,14 +42,10 @@ body{
     color:#38bdf8;
 }
 
-
-
-
-
-/* ===== Projects Section ===== */
-.projects-section{
-    padding:60px 40px;
-    max-width:1200px;
+/* Section */
+.cert-section{
+    padding:120px 40px 60px;
+    max-width:1100px;
     margin:auto;
     text-align:center;
 }
@@ -64,96 +60,73 @@ body{
     color:#94a3b8;
 }
 
-/* Grid */
-.projects-grid{
-    margin-top:40px;
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
-    gap:30px;
+/* Filter Buttons */
+.filter-buttons{
+    margin-top:25px;
 }
 
-/* Card */
-.project-card{
+.filter-btn{
     background:#020617;
     border:1px solid #1e293b;
-    border-radius:14px;
-    padding:20px;
-    text-align:left;
-    transition:0.4s;
-}
-
-.project-card:hover{
-    transform:translateY(-8px);
-    box-shadow:0 0 30px rgba(56,189,248,0.25);
-}
-
-.project-card img{
-    width:100%;
-    height:180px;
-    object-fit:cover;
-    border-radius:8px;
-}
-
-.project-card h3{
-    margin-top:15px;
-    color:#38bdf8;
-}
-
-.project-card p{
-    margin-top:8px;
-    font-size:14px;
-    line-height:1.5;
-}
-
-/* Tech tags */
-.tech{
-    margin-top:12px;
-}
-
-.tech span{
-    display:inline-block;
-    border:1px solid #1e293b;
-    padding:4px 10px;
-    border-radius:12px;
-    margin-right:6px;
-    font-size:12px;
-}
-
-/* Buttons */
-.buttons{
-    margin-top:15px;
-}
-
-.btn{
-    display:inline-block;
-    padding:6px 14px;
-    border-radius:6px;
-    font-size:13px;
-    margin-right:8px;
-    text-decoration:none;
+    color:#e2e8f0;
+    padding:6px 16px;
+    border-radius:20px;
+    margin:5px;
+    cursor:pointer;
     transition:0.3s;
 }
 
-.code{
-    background:#111827;
-    color:#38bdf8;
-}
-
-.live{
+.filter-btn.active,
+.filter-btn:hover{
     background:#38bdf8;
     color:#020617;
 }
 
-.btn:hover{
-    transform:scale(1.05);
+/* Grid */
+.cert-grid{
+    margin-top:40px;
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:25px;
 }
 
-/* Footer */
-footer{
-    text-align:center;
-    padding:20px;
+/* Card (same as project style) */
+.cert-card{
     background:#020617;
-    margin-top:40px;
+    border:1px solid #1e293b;
+    border-radius:14px;
+    padding:25px;
+    text-align:left;
+    transition:0.4s;
+}
+
+.cert-card:hover{
+    transform:translateY(-8px);
+    box-shadow:0 0 30px rgba(56,189,248,0.25);
+}
+
+.cert-card h3{
+    color:#38bdf8;
+}
+
+.cert-card p{
+    margin:8px 0 15px;
+    color:#94a3b8;
+}
+
+/* Button */
+.btn.view{
+    background:#38bdf8;
+    color:#020617;
+    padding:6px 16px;
+    border-radius:6px;
+    text-decoration:none;
+    font-size:14px;
+    transition:0.3s;
+}
+
+.btn.view:hover{
+    transform:scale(1.05);
 }
 
 /* Scroll animation */
@@ -168,3 +141,10 @@ footer{
     transform:translateY(0);
 }
 
+/* Footer */
+footer{
+    text-align:center;
+    padding:20px;
+    background:#020617;
+    margin-top:40px;
+}

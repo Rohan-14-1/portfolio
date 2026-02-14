@@ -6,9 +6,8 @@
 }
 
 body{
-    background:linear-gradient(120deg,#020617,#0b3c5d);
+    background: linear-gradient(90deg,#020617,#0b3c5d);
     color:#e2e8f0;
-    padding-top:80px;
 }
 
 /* Navbar */
@@ -17,10 +16,10 @@ body{
     justify-content:space-between;
     padding:20px 50px;
     position:fixed;
-    top:0;
     width:100%;
     background:rgba(2,6,23,0.8);
     backdrop-filter:blur(10px);
+    z-index:1000;
 }
 
 .logo{
@@ -34,13 +33,15 @@ body{
 }
 
 .nav-links a{
-    color:#e2e8f0;
     text-decoration:none;
+    color:#e2e8f0;
+    transition:0.3s;
 }
 
 .nav-links a:hover{
     color:#38bdf8;
 }
+
 
 /* Contact Section */
 .contact-section{
