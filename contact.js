@@ -1,10 +1,5 @@
-const form = document.getElementById("contactForm");
-
-if(form){
-    form.addEventListener("submit", function() {
-        // Clear form after submission
-        setTimeout(() => {
-            form.reset();
-        }, 500);
-    });
-}
+// Form animation (fake submit effect)
+document.querySelector(".contact-form").addEventListener("submit", function(e){
+    e.preventDefault();
+    alert("Message sent successfully!");
+});
