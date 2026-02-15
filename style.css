@@ -227,11 +227,7 @@ footer{
 
 /* ===== Mobile ===== */
 @media (max-width: 768px) {
-  .nav-links li:not(:first-child){
-    display: none;
-  }
-
-
+ 
     .hero{
         flex-direction:column;
         text-align:center;

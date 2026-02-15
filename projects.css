@@ -169,8 +169,3 @@ footer{
 }
 
 /* mobile */
-@media (max-width: 768px) {
-  .nav-links li:not(:first-child){
-    display: none;
-  }
-}
