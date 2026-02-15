@@ -132,7 +132,11 @@ body{
 .css{ color:#38bdf8; }
 
 /* Mobile */
-@media(max-width:768px){
+@media (max-width: 768px) {
+  .nav-links li:not(:first-child){
+    display: none;
+  }
+
     .skills-box{
         height:auto;
         display:flex;
