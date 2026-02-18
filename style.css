@@ -202,7 +202,7 @@ footer{
     .hero{
         flex-direction:column;
         text-align:center;
-        padding:120px 30px;
+        padding:70px 30px;
         min-height:auto;
     }
 
