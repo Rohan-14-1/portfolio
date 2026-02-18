@@ -104,19 +104,64 @@ body{
 .css{ color:#38bdf8; }
 
 /* Mobile */
+/* ===== Mobile Fix with Animation ===== */
 @media(max-width:768px){
-    .skills-box{
-        height:auto;
-        display:flex;
-        flex-wrap:wrap;
-        justify-content:center;
-        gap:20px;
-        padding:20px;
+
+    body{
+        padding-top:60px;
     }
 
+    .skills-section{
+        padding:40px 15px;
+    }
+
+    .title{
+        font-size:26px;
+    }
+
+    .subtitle{
+        font-size:14px;
+        padding:0 10px;
+    }
+
+    /* Grid layout */
+    .skills-box{
+        height:auto;
+        display:grid;
+        grid-template-columns:repeat(2, 1fr);
+        gap:25px;
+        padding:25px;
+        max-width:100%;
+    }
+
+    /* Keep animation */
     .skill-circle{
-        position:relative;
+        position:relative !important;
+        top:auto !important;
+        left:auto !important;
+        right:auto !important;
+        bottom:auto !important;
+
         width:90px;
         height:90px;
+        margin:auto;
+
+        /* Smooth floating animation for mobile */
+        animation: floatMobile 4s ease-in-out infinite;
     }
+
+    .skill-circle i{
+        font-size:26px;
+    }
+
+    .skill-circle span{
+        font-size:12px;
+    }
+}
+
+/* Smaller floating movement for mobile */
+@keyframes floatMobile{
+    0%{ transform:translateY(0); }
+    50%{ transform:translateY(-8px); }
+    100%{ transform:translateY(0); }
 }
