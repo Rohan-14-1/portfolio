@@ -12,35 +12,7 @@ body{
 }
 
 /* Navbar */
-.navbar{
-    display:flex;
-    justify-content:space-between;
-    padding:20px 50px;
-    position:fixed;
-    top:0;
-    width:100%;
-    background:rgba(2,6,23,0.8);
-    backdrop-filter:blur(10px);
-}
 
-.logo{
-    color:#38bdf8;
-}
-
-.nav-links{
-    list-style:none;
-    display:flex;
-    gap:25px;
-}
-
-.nav-links a{
-    text-decoration:none;
-    color:#e2e8f0;
-}
-
-.nav-links a:hover{
-    color:#38bdf8;
-}
 
 /* Section */
 .about-section{
