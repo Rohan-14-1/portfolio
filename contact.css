@@ -97,13 +97,38 @@ body{
 }
 
 /* Mobile */
+/* ===== Mobile Fix ===== */
 @media(max-width:768px){
-    .contact-section h1{
-        font-size:28px;
+
+    /* Prevent content hiding behind navbar */
+    body{
+        padding-top:60px;
     }
 
+    /* Reduce top space */
+    .contact-section{
+        padding:20px 16px 40px;
+    }
+
+    /* Smaller heading for mobile */
+    .contact-section h1{
+        font-size:26px;
+        line-height:1.3;
+    }
+
+    .subtitle{
+        font-size:14px;
+        margin-bottom:20px;
+    }
+
+    /* Social icons spacing */
     .social-icons{
-        flex-wrap:wrap;
-        gap:15px;
+        gap:14px;
+        margin-bottom:20px;
+    }
+
+    /* Form spacing */
+    .contact-form{
+        gap:14px;
     }
 }
