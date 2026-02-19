@@ -41,6 +41,20 @@ body{
     line-height:1.6;
 }
 
+/* Fix typing area height to prevent layout shift */
+.typing{
+    height: 32px;              /* keeps space fixed */
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+}
+
+/* Optional: keeps width stable for longer text */
+#typing-text{
+    display: inline-block;
+    min-width: 280px;
+}
+
 /* Skills */
 .skills-row{
     margin-top:20px;
