@@ -43,6 +43,25 @@ body{
     overflow:hidden;
 }
 
+.skills-box::before{
+    content:"";
+    position:absolute;
+    width:600px;
+    height:600px;
+    background:radial-gradient(circle, rgba(56,189,248,0.15), transparent 60%);
+    top:-200px;
+    left:-200px;
+    animation:moveGlow 12s linear infinite;
+}
+
+@keyframes moveGlow{
+    0%{ transform:translate(0,0); }
+    50%{ transform:translate(300px,200px); }
+    100%{ transform:translate(0,0); }
+}
+
+
+
 /* Circle */
 .skill-circle{
     position:absolute;
@@ -71,7 +90,15 @@ body{
 
 .skill-circle:hover{
     transform:scale(1.15);
-    box-shadow:0 0 25px #38bdf8;
+    box-shadow:
+        0 0 20px rgba(56,189,248,0.7),
+        0 0 40px rgba(56,189,248,0.5),
+        0 0 70px rgba(56,189,248,0.3);
+}
+
+.skill-circle:hover i{
+    transform:scale(1.2) rotate(8deg);
+    transition:0.3s;
 }
 
 /* Floating */
@@ -113,6 +140,20 @@ body{
 .matplotlib { color: #11557c; }
 .github { color: #ffffff; }
 .canva { color: #00c4cc; }
+
+/* Different floating speeds */
+.skill-circle:nth-child(1){ animation-duration:3.5s; }
+.skill-circle:nth-child(2){ animation-duration:4.2s; }
+.skill-circle:nth-child(3){ animation-duration:3.8s; }
+.skill-circle:nth-child(4){ animation-duration:4.5s; }
+.skill-circle:nth-child(5){ animation-duration:3.6s; }
+.skill-circle:nth-child(6){ animation-duration:4.3s; }
+.skill-circle:nth-child(7){ animation-duration:3.7s; }
+.skill-circle:nth-child(8){ animation-duration:4.6s; }
+.skill-circle:nth-child(9){ animation-duration:3.9s; }
+.skill-circle:nth-child(10){ animation-duration:4.4s; }
+.skill-circle:nth-child(11){ animation-duration:3.8s; }
+.skill-circle:nth-child(12){ animation-duration:4.2s; }
 
 /* Mobile */
 /* ===== Mobile Fix with Animation ===== */
