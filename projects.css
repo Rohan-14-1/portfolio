@@ -42,6 +42,11 @@ body{
     gap:30px;
 }
 
+.full{
+    grid-column: 1 / -1;   /* make it full width */
+    margin-top: 20px;      /* extra gap from upper row */
+}
+
 /* Card */
 .project-card{
     background:#020617;
