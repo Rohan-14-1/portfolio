@@ -67,7 +67,20 @@ body{
     background:#020617;
     padding:6px 14px;
     border-radius:20px;
-    border:1px solid #1e293b;
+    border:1px solid #38bdf8;
+    color:#e2e8f0;
+    transition:0.3s;
+
+    /* Glow */
+    box-shadow: 0 0 8px rgba(56,189,248,0.4);
+}
+
+.skills-row span:hover{
+    box-shadow:
+        0 0 10px #38bdf8,
+        0 0 20px #38bdf8,
+        0 0 35px rgba(56,189,248,0.6);
+    transform: translateY(-2px);
 }
 
 /* Buttons */
@@ -158,6 +171,33 @@ body{
     to{ box-shadow:0 0 40px #38bdf8; }
 }
 
+/* ===== Reusable Glow Box ===== */
+.glow-box{
+    border:1px solid #38bdf8;
+    border-radius:12px;
+    box-shadow: 0 0 10px rgba(56,189,248,0.4);
+    transition:0.3s;
+    position:relative;
+}
+
+.glow-box:hover{
+    box-shadow:
+        0 0 15px #38bdf8,
+        0 0 30px rgba(56,189,248,0.7);
+}
+
+/* Bottom light effect */
+.glow-box::after{
+    content:"";
+    position:absolute;
+    left:15%;
+    right:15%;
+    bottom:-10px;
+    height:12px;
+    background: rgba(56,189,248,0.4);
+    filter: blur(12px);
+    border-radius:50%;
+}
 /* Sections */
 .section{
     padding:80px;
