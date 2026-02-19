@@ -83,14 +83,21 @@ body{
 
 /* Positions */
 .skill-circle:nth-child(1){ top:40px; left:60px; }
-.skill-circle:nth-child(2){ top:180px; left:200px; }
-.skill-circle:nth-child(3){ top:320px; left:80px; }
-.skill-circle:nth-child(4){ top:80px; left:420px; }
-.skill-circle:nth-child(5){ top:260px; left:500px; }
-.skill-circle:nth-child(6){ top:40px; right:80px; }
-.skill-circle:nth-child(7){ top:200px; right:50px; }
-.skill-circle:nth-child(8){ bottom:40px; right:200px; }
-.skill-circle:nth-child(9){ bottom:40px; left:350px; }
+.skill-circle:nth-child(2){ top:40px; left:220px; }
+.skill-circle:nth-child(3){ top:40px; left:380px; }
+.skill-circle:nth-child(4){ top:40px; left:540px; }
+.skill-circle:nth-child(5){ top:40px; left:700px; }
+
+.skill-circle:nth-child(6){ top:160px; left:120px; }
+.skill-circle:nth-child(7){ top:160px; left:280px; }
+.skill-circle:nth-child(8){ top:160px; left:440px; }
+.skill-circle:nth-child(9){ top:160px; left:600px; }
+
+.skill-circle:nth-child(10){ top:280px; left:60px; }
+.skill-circle:nth-child(11){ top:280px; left:220px; }
+.skill-circle:nth-child(12){ top:280px; left:380px; }
+.skill-circle:nth-child(13){ top:280px; left:570px; }
+.skill-circle:nth-child(14){ top:280px; left:770px; }
 
 /* Icon colors */
 .python{ color:#facc15; }
@@ -102,6 +109,11 @@ body{
 .skl{ color:#ec4899; }
 .html{ color:#f97316; }
 .css{ color:#38bdf8; }
+.java { color: #f89820; }
+.wordpress { color: #21759b; }
+.matplotlib { color: #11557c; }
+.github { color: #ffffff; }
+.canva { color: #00c4cc; }
 
 /* Mobile */
 /* ===== Mobile Fix with Animation ===== */
