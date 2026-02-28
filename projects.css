@@ -1,3 +1,4 @@
+/* Reset */
 *{
     margin:0;
     padding:0;
@@ -9,12 +10,6 @@ body{
     background: linear-gradient(90deg,#020617,#0b3c5d);
     color:#e2e8f0;
 }
-
-/* Navbar */
-
-
-
-
 
 /* ===== Projects Section ===== */
 .projects-section{
@@ -34,32 +29,41 @@ body{
     color:#94a3b8;
 }
 
-/* Grid */
+/* ===== Grid Layout (3 cards per row) ===== */
 .projects-grid{
     margin-top:40px;
     display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+    grid-template-columns: repeat(3, 1fr); /* 3 boxes in one row */
     gap:30px;
 }
 
+/* Remove if you don’t want full-width card */
 .full{
-    grid-column: 1 / -1;   /* make it full width */
-    margin-top: 20px;      /* extra gap from upper row */
+    grid-column: 1 / -1;
+    margin-top:20px;
 }
 
-/* Card */
+/* ===== Project Card ===== */
 .project-card{
     background:#020617;
     border:1px solid #1e293b;
     border-radius:14px;
     padding:20px;
     text-align:left;
-    transition:0.4s;
+    transition: all 0.3s ease;
+    cursor:pointer;
+    position:relative;
 }
 
-.project-card:hover{
-    transform:translateY(-8px);
-    box-shadow:0 0 30px rgba(56,189,248,0.25);
+.project-card:hover,
+.project-card:active{
+    transform: translateY(-8px) scale(1.02);   /* move up + slight zoom */
+    border-color:#38bdf8;                      /* highlight border */
+    box-shadow: 0 15px 40px rgba(56,189,248,0.35); /* glow effect */
+}
+
+.project-card:active{
+    transform: translateY(-4px) scale(1.01);
 }
 
 .project-card img{
@@ -80,7 +84,7 @@ body{
     line-height:1.5;
 }
 
-/* Tech tags */
+/* ===== Tech Tags ===== */
 .tech{
     margin-top:12px;
 }
@@ -91,10 +95,11 @@ body{
     padding:4px 10px;
     border-radius:12px;
     margin-right:6px;
+    margin-top:5px;
     font-size:12px;
 }
 
-/* Buttons */
+/* ===== Buttons ===== */
 .buttons{
     margin-top:15px;
 }
@@ -112,6 +117,7 @@ body{
 .code{
     background:#111827;
     color:#38bdf8;
+    border:1px solid #38bdf8;
 }
 
 .live{
@@ -123,7 +129,7 @@ body{
     transform:scale(1.05);
 }
 
-/* Footer */
+/* ===== Footer ===== */
 footer{
     text-align:center;
     padding:20px;
@@ -131,7 +137,7 @@ footer{
     margin-top:40px;
 }
 
-/* Scroll animation */
+/* ===== Scroll Animation ===== */
 .hidden{
     opacity:0;
     transform:translateY(40px);
@@ -143,20 +149,26 @@ footer{
     transform:translateY(0);
 }
 
-/* mobile */
+/* ===== Responsive ===== */
 
-/* ===== Mobile Spacing Fix for Projects ===== */
-@media(max-width:768px){
+/* Tablet → 2 cards */
+@media(max-width:992px){
+    .projects-grid{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Mobile → 1 card */
+@media(max-width:600px){
+    .projects-grid{
+        grid-template-columns: 1fr;
+    }
 
     body{
-        padding-top:60px;   /* height of navbar */
+        padding-top:60px;
     }
 
     .projects-section{
-        padding-top:20px;   /* reduce space below navbar */
-    }
-
-    .projects-section h1{
-        margin-top:0;
+        padding-top:20px;
     }
 }
