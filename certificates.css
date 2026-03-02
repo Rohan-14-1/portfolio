@@ -113,12 +113,7 @@ body{
 }
 
 /* Footer */
-footer{
-    text-align:center;
-    padding:20px;
-    background:#020617;
-    margin-top:40px;
-}
+
 
 /* ===== Mobile Fix ===== */
 @media(max-width:768px){
